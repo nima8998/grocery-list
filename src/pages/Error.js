@@ -19,8 +19,13 @@ const Wrapper = styled.section`
     flex-direction: column;
     gap: 1rem;
     height: 100%;
+    text-align: center;
 
     .nro{
-        font-size: 55px;
+      font-size: 55px;
+    }
+    
+    a{
+      color: var(--c-white);
     }
 `

@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import { notifySuccess } from "../utils/notifySuccess";
 import { notifyError } from "../utils/notifyError";
 import { ToastContainer } from "react-toastify";
-import Navbar from "./Navbar";
+import Navbar from "../components/Navbar";
 
 export default function ListDetail() {
     const {listName} = useParams();
@@ -58,8 +58,8 @@ export default function ListDetail() {
                 <button onClick={()=>addItem()} className="btnAction">✔</button>
             </div>
             <div className="ItemList-footer">
-                <button onClick={()=>deleteList()} className="btnDelete">Eliminar lista</button>
-                <button onClick={()=>saveList()} className="btnSave">Guardar lista</button>
+                <button onClick={()=>deleteList()} className="CTA btnDelete">Eliminar lista</button>
+                <button onClick={()=>saveList()} className="CTA">Guardar lista</button>
             </div>
         </ItemList>
         <Navbar/>
@@ -137,18 +137,6 @@ const ItemList = styled.div`
     .ItemList-footer{
         display: flex;
         gap: 15px;
-
-        .btnSave, .btnDelete{
-            border: 1px solid var(--c-glow);
-            background-color: transparent;
-            padding: 12px;
-            color: var(--c-white);
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            width: 50%;
-            margin: auto;
-        }
 
         .btnDelete{
             border-color: red;

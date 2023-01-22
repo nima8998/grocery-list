@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import styled from "styled-components";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Navbar from "./Navbar";
+import Navbar from "../components/Navbar";
 import { notifyError } from "../utils/notifyError";
 
 
@@ -15,7 +15,7 @@ export default function NewList() {
         
         if(!sessionLists.some(item=>item === listName)){
             sessionStorage.setItem(`${listName}`, JSON.stringify([]))
-            window.location.assign(`/list/${listName}`)
+            window.location.assign(`/lista/${listName}`)
         }else{
             notifyError("La lista ya existe");
         }
@@ -34,7 +34,7 @@ export default function NewList() {
                     onChange={(e)=>setListName(e.target.value)}
                     required
                 />
-                <button type="submit">Crear</button>
+                <button type="submit" className="CTA">Crear</button>
             </div>
         </form>
         <ToastContainer
@@ -73,18 +73,6 @@ const Wrapper = styled.section`
         text-align: center;
         width: 50%;
 
-        button{
-            border: 1px solid var(--c-glow);
-            background-color: transparent;
-            padding: 12px;
-            color: var(--c-white);
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            width: 50%;
-            margin: auto;
-            margin-top: 2rem;
-        }
 
         button:focus{
             background-color: var(--c-glow);

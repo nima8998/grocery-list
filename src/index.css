@@ -10,6 +10,22 @@
   --c-white: #f0f8ff;
   --c-glow: #00ffb7c0;
 }
+html, body{
+  overflow: hidden;
+  font-size: 20px;
+}
+
+p{
+  font-size: 1rem;
+}
+
+a{
+  font-size: .8rem;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-size: 2rem;
+}
 
 main{
   background-color: var(--c-black);
@@ -19,11 +35,9 @@ main{
 
 section{
   height: calc(100% - 100px);
+  padding: .5rem;
 }
 
-html, body{
-  overflow: hidden;
-}
 
 input{
   border: none;
@@ -38,4 +52,16 @@ input{
 
 input:focus{
   border-color: var(--c-glow);
+}
+
+.CTA{
+  border: 1px solid var(--c-glow);
+  background-color: transparent;
+  padding: 12px;
+  color: var(--c-white);
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  width: 50%;
+  margin: auto;
 }

@@ -9,7 +9,7 @@ const routes = [
     },
     {
         name: "Crear",
-        path: "/new-list",
+        path: "/nueva",
     },
     {
         name: "Mis listas",

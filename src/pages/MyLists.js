@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import styled from 'styled-components'
-import Navbar from './Navbar';
+import Navbar from '../components/Navbar';
 
 export default function MyLists() {
     const sessionLists = Object.keys(sessionStorage);
@@ -13,10 +13,10 @@ export default function MyLists() {
                 {
                     sessionStorage?.length > 0 ?
                         sessionLists.map((item, key)=>(
-                            <li key={key} className="item">
-                            <Link to={`/list/${item}`}>{item}</Link>
+                            <li key={key} className="CTA">
+                                <Link to={`/lista/${item}`}>{item}</Link>
                             </li>
-                        )) : <li>No hay listas. <Link to={"/new-list"}>Crear una.</Link></li>
+                        )) : <li>No tienes ninguna lista creada.</li>
                 }
             </ul>
         </List>
@@ -47,14 +47,6 @@ const List = styled.div`
 
         a{
             color: var(--c-white);
-        }
-    }
-
-    .item{
-        border: 1px solid var(--c-glow);
-        width: 50%;
-        padding: 5px;
-        a{
             text-decoration: none;
         }
     }

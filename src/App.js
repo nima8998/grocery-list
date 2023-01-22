@@ -1,10 +1,11 @@
 import React from 'react';
 
-import Home from './components/Home';
-import Error from './components/Error';
-import NewList from './components/NewList';
-import ListDetail from './components/ListDetail';
-import MyLists from './components/MyLists.js';
+import Home from './pages/Home';
+import Error from './pages/Error';
+import NewList from './pages/NewList';
+import ListDetail from './pages/ListDetail';
+import MyLists from './pages/MyLists.js';
+import Tutorial from './pages/Tutorial.js';
 import Layout from './layout/Layout';
 
 import {
@@ -20,16 +21,20 @@ const router = [
         element: <Home/>
     },
     {
-        path: "/new-list",
+        path: "/nueva",
         element: <NewList/>
     },
     {
-        path: "/list/:listName",
+        path: "/lista/:listName",
         element: <ListDetail/>
     },
     {
         path: "/mis-listas",
         element: <MyLists/>
+    },
+    {
+        path: "/tutorial",
+        element: <Tutorial/>
     },
     {
         path: "*",
@@ -40,7 +45,6 @@ const router = [
 
 function App() {
   return (
-    // <RouterProvider router={router}/>
     <BrowserRouter>
         <Routes>
             <Route path='/' element={<Layout/>}>

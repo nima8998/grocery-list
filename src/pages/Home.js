@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-import Navbar from './Navbar'
+import Navbar from '../components/Navbar'
 
 export default function Home() {
   return (
@@ -17,6 +17,7 @@ export default function Home() {
         </Description>
         <ButtonBox>
             <Link to={'new-list'}>Empezá</Link>
+            <Link to={'tutorial'}>¿Cómo se usa?</Link>
         </ButtonBox>
         <Navbar/>
     </Wrapper>
@@ -46,7 +47,12 @@ const Description = styled.p`
 `
 
 const ButtonBox = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
     a{
-        color: var(--c-white)
+        color: var(--c-white);
+        text-decoration: none;
     };
 `
