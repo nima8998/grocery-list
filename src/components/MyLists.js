@@ -16,7 +16,7 @@ export default function MyLists() {
                             <li key={key} className="item">
                             <Link to={`/list/${item}`}>{item}</Link>
                             </li>
-                        )) : <p>no hay listas</p>
+                        )) : <li>No hay listas. <Link to={"/new-list"}>Crear una.</Link></li>
                 }
             </ul>
         </List>
@@ -44,6 +44,10 @@ const List = styled.div`
         flex-direction: column;
         align-items: center;
         gap: 15px;
+
+        a{
+            color: var(--c-white);
+        }
     }
 
     .item{

@@ -37,14 +37,14 @@ const Wrapper = styled.nav`
     position: fixed;
     display: flex;
     align-items: center;
-    height: 50px;
+    height: 80px;
     bottom: 0;
     left: 0;
     width: 100%;
     font-weight: bolder;
-    color: var(--c-white);
+    color: var(--c-black);
     background-color: var(--c-glow);
-    padding: 0 15px;    
+    padding: 0 35px;
     
     ul{
         display: flex;

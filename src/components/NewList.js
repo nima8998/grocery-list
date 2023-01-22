@@ -1,65 +1,24 @@
 import React, {useState} from "react";
 import styled from "styled-components";
-import {toast, ToastContainer } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Navbar from "./Navbar";
+import { notifyError } from "../utils/notifyError";
 
-export const notifyError = (message, closeFunction) => toast.error(
-            message, {
-            position: "top-center",
-            autoClose: 2000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "dark",
-            onClose: typeof closeFunction === "function" && closeFunction(),
-        })
-
-export const notifySuccess = (message, closeFunction) => toast.success(
-            message, {
-            position: "top-center",
-            autoClose: 2000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "dark",
-            onClose: typeof closeFunction === "function" && closeFunction(),
-        })
-
-const createList = (listName) =>{
-    return new Promise((resolve, reject)=>{
-        const sessionLists = Object.keys(sessionStorage);
-        try {
-            if(!sessionLists.some(item=>item === listName)){
-                sessionStorage.setItem(`${listName}`, JSON.stringify([]))
-                resolve("Lista creada con éxito !")
-            }else{
-                reject("La lista ya existe")
-            }
-        } catch (error) {
-            return error
-        }
-    })
-}
 
 export default function NewList() {
+    const sessionLists = Object.keys(sessionStorage);
     const [listName, setListName] = useState('');
     
     const handleForm = (e) =>{
         e.preventDefault();
         
-        createList(listName)
-            .then(result=>{
-                notifySuccess(result);
-                setTimeout(() => {
-                    window.location.assign(`/list/${listName}`)
-                }, 3000);
-            })
-            .catch(error=>notifyError(error))
+        if(!sessionLists.some(item=>item === listName)){
+            sessionStorage.setItem(`${listName}`, JSON.stringify([]))
+            window.location.assign(`/list/${listName}`)
+        }else{
+            notifyError("La lista ya existe");
+        }
     };
 
   return (

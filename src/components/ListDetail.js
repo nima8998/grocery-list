@@ -1,7 +1,8 @@
 import React, {useState} from "react";
 import styled from "styled-components";
 import { useParams } from "react-router-dom";
-import { notifyError, notifySuccess } from "./NewList";
+import { notifySuccess } from "../utils/notifySuccess";
+import { notifyError } from "../utils/notifyError";
 import { ToastContainer } from "react-toastify";
 import Navbar from "./Navbar";
 
@@ -86,7 +87,6 @@ const Wrapper = styled.section`
     justify-content: flex-start;
     gap: 1rem;
     padding: 1rem;
-    height: 100%;
 `
 const Title = styled.h2`
     .listName{

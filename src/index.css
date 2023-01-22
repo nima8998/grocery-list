@@ -17,12 +17,12 @@ main{
   height: 100vh;
 }
 
-a{
-  color: var(--c-white);
+section{
+  height: calc(100% - 100px);
 }
 
-a:visited{
-  color: var(--c-white);
+html, body{
+  overflow: hidden;
 }
 
 input{

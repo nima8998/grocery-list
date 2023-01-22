@@ -46,5 +46,7 @@ const Description = styled.p`
 `
 
 const ButtonBox = styled.div`
-
+    a{
+        color: var(--c-white)
+    };
 `
