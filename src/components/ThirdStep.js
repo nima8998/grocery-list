@@ -37,7 +37,7 @@ export default function FirstStep() {
         <p>En Android:</p>
         <Carrousel>
           <p className='arrows' onClick={()=>handleStep(false)}>&lt;</p>
-            <img src={ImageDataSource.find(({id})=>id === currentImg).img}/>
+            <img src={ImageDataSource.find(({id})=>id === currentImg).img} alt="descriptive tutorial"/>
           <p className='arrows' onClick={()=>handleStep(true)}>&gt;</p>
         </Carrousel>
         <div>
