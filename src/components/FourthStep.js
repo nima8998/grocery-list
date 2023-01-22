@@ -83,10 +83,8 @@ const Carrousel = styled.div`
   gap: 5px;
   width: 80%;
   min-height: 150px;
-  max-height: 150px;
 
   img{
-    max-width: 75%;
     object-fit: cover;
   }
 `
