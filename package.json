@@ -1,6 +1,6 @@
 {
-  "name": "grocery-list-pwa",
-  "version": "0.1.0",
+  "name": "listapp",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "5.16.5",
@@ -37,7 +37,7 @@
   },
   "browserslist": {
     "production": [
-      ">0.2%",
+      "90%",
       "not dead",
       "not op_mini all"
     ],
@@ -48,11 +48,11 @@
     ]
   },
   "devDependencies": {
-    "localforage": "^1.10.0",
-    "match-sorter": "^6.3.1",
-    "react-router-dom": "^6.7.0",
-    "react-toastify": "^9.1.1",
-    "sort-by": "^1.2.0",
-    "styled-components": "^5.3.6"
+    "localforage": "1.10.0",
+    "match-sorter": "6.3.1",
+    "react-router-dom": "6.7.0",
+    "react-toastify": "9.1.1",
+    "sort-by": "1.2.0",
+    "styled-components": "5.3.6"
   }
 }
