@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <Wrapper>
         <Title>
-            Grocery-List PWA
+            Grocery-List PWAa
         </Title>
         <Description>
             Crea la lista de compras desde tu celular, <i>sin necesidad de tener acceso a internet.</i> 
