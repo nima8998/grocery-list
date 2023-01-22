@@ -29,7 +29,7 @@ export default function Tutorial() {
 const Wrapper = styled.section`
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
 `
 
 const Buttons = styled.div`
