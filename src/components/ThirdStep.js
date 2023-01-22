@@ -40,15 +40,17 @@ export default function FirstStep() {
             <img src={ImageDataSource.find(({id})=>id === currentImg).img}/>
           <p className='arrows' onClick={()=>handleStep(true)}>&gt;</p>
         </Carrousel>
-        <p>
-            1.- Esquina superior derecha, ingresar en los 3 puntos.
-        </p>
-        <p>
-            2.- Elegir la opción "Add to Home Screen" o "Agregar al inicio".
-        </p>
-        <p>
-            3.- Confirmar.
-        </p>
+        <div>
+          <p>
+              1.- Esquina superior derecha, ingresar en los 3 puntos.
+          </p>
+          <p>
+              2.- Elegir la opción "Add to Home Screen" o "Agregar al inicio".
+          </p>
+          <p>
+              3.- Confirmar.
+          </p>
+      </div>
     </Wrapper>
   )
 }
@@ -57,14 +59,17 @@ const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    text-align: center;    
     gap: 1rem;
-    text-align: center;
     width: 90%;
+    height: 100%;
     margin: 0 auto;
 
     p{
       font-size: .8rem;
     }
+
 
     h2{
       font-size: 1.5rem;
@@ -81,7 +86,7 @@ const Carrousel = styled.div`
   max-height: 150px;
 
   img{
-    width: 90%;
+    max-width: 75%;
     object-fit: cover;
   }
 `

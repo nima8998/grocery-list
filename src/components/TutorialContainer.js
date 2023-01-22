@@ -1,4 +1,5 @@
 import React from 'react'
+import styled from 'styled-components'
 
 import FirstStep from './FirstStep'
 import SecondStep from './SecondStep'
@@ -26,10 +27,14 @@ const viewSteps = [
 
 export default function TutorialContainer({currentStep}) {
   return (
-    <div>
+    <Wrapper>
       {
         viewSteps.find(({id})=>id===currentStep).element
       }
-    </div>
+    </Wrapper>
   )
 }
+
+const Wrapper = styled.div`
+  height: 100%;
+`
