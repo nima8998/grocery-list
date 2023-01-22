@@ -53,6 +53,7 @@ const Wrapper = styled.nav`
         list-style: none;
         width: 100%;       
         a{
+            color: var(--c-black);
             text-decoration: none;
         }
     }
