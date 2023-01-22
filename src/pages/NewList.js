@@ -73,7 +73,10 @@ const Wrapper = styled.section`
         text-align: center;
         width: 50%;
 
-
+        label{
+            font-size: .9rem;
+        }
+        
         button:focus{
             background-color: var(--c-glow);
             color: var(--c-black);

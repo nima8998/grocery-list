@@ -16,7 +16,7 @@ export default function Home() {
             Fácil, rápido y de forma intuitiva.
         </Description>
         <ButtonBox>
-            <Link to={'new-list'}>Empezá</Link>
+            <Link to={'nueva'}>Empezá</Link>
             <Link to={'tutorial'}>¿Cómo se usa?</Link>
         </ButtonBox>
         <Navbar/>
