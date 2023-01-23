@@ -81,10 +81,11 @@ const Carrousel = styled.div`
   align-items: center;
   justify-content: space-between;
   gap: 5px;
-  width: 80%;
-  min-height: 150px;
-
+  padding: 35px 0;
+  
   img{
+    text-align: center;
+    max-width: 90%;
     object-fit: cover;
   }
 `

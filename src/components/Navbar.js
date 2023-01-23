@@ -34,12 +34,9 @@ export default function Navbar() {
 }
 
 const Wrapper = styled.nav`
-    position: fixed;
     display: flex;
     align-items: center;
     height: 80px;
-    bottom: 0;
-    left: 0;
     width: 100%;
     font-weight: bolder;
     color: var(--c-black);

@@ -4,7 +4,6 @@ import { useParams } from "react-router-dom";
 import { notifySuccess } from "../utils/notifySuccess";
 import { notifyError } from "../utils/notifyError";
 import { ToastContainer } from "react-toastify";
-import Navbar from "../components/Navbar";
 
 export default function ListDetail() {
     const {listName} = useParams();
@@ -62,7 +61,6 @@ export default function ListDetail() {
                 <button onClick={()=>saveList()} className="CTA">Guardar lista</button>
             </div>
         </ItemList>
-        <Navbar/>
         <ToastContainer
             position="top-center"
             autoClose={2000}
@@ -100,16 +98,13 @@ const ItemList = styled.div`
     flex-direction: column;
     justify-content: space-between;
     gap: 2rem;
-    height: 75%;
+    height: 50%;
     width: 100%;
-    padding-bottom: 5em;
 
     .item{
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 15px;
-        margin: 10px 0;
         p{
             flex: 1;
         }
@@ -119,11 +114,10 @@ const ItemList = styled.div`
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        min-height: 100%;
+        min-height: 75%;
         overflow-y: auto;
         width: 75%;
-        margin: auto;
-        padding: 0 20px;
+        margin: 0 auto;
     }
 
     .ItemList-add{

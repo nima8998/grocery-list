@@ -2,7 +2,6 @@ import React, {useState} from "react";
 import styled from "styled-components";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Navbar from "../components/Navbar";
 import { notifyError } from "../utils/notifyError";
 
 
@@ -49,7 +48,6 @@ export default function NewList() {
             pauseOnHover
             theme="dark"
         />
-        <Navbar/>
     </Wrapper>
   )
 }

@@ -10,6 +10,7 @@
   --c-white: #f0f8ff;
   --c-glow: #00ffb7c0;
 }
+
 html, body{
   overflow: hidden;
   font-size: 20px;
@@ -27,6 +28,11 @@ h1, h2, h3, h4, h5, h6{
   font-size: 2rem;
 }
 
+#root{
+  display: flex;
+  flex-direction: column;
+}
+
 main{
   background-color: var(--c-black);
   color: var(--c-white);
@@ -34,7 +40,7 @@ main{
 }
 
 section{
-  height: calc(100% - 100px);
+  height: 100%;
   padding: .5rem;
 }
 

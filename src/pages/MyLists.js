@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import styled from 'styled-components'
-import Navbar from '../components/Navbar';
 
 export default function MyLists() {
     const sessionLists = Object.keys(sessionStorage);
@@ -20,7 +19,6 @@ export default function MyLists() {
                 }
             </ul>
         </List>
-        <Navbar/>
     </Wrapper>
   )
 }

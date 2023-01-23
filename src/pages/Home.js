@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-import Navbar from '../components/Navbar'
 
 export default function Home() {
   return (
@@ -19,7 +18,6 @@ export default function Home() {
             <Link to={'nueva'}>Empezá</Link>
             <Link to={'tutorial'}>¿Cómo se usa?</Link>
         </ButtonBox>
-        <Navbar/>
     </Wrapper>
   )
 }
