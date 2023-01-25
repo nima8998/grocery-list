@@ -2,6 +2,8 @@ import React from "react"
 import { Link } from "react-router-dom"
 import styled from "styled-components"
 
+import Debug from "./Debug"
+
 const routes = [
     {
         name: "Inicio",
@@ -29,11 +31,13 @@ export default function Navbar() {
             ))
         }
         </ul>
+        <Debug/>
     </Wrapper>
   )
 }
 
 const Wrapper = styled.nav`
+    position: relative;
     display: flex;
     align-items: center;
     height: 80px;
