@@ -114,10 +114,11 @@ const ItemList = styled.div`
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        min-height: 75%;
         overflow-y: auto;
         width: 75%;
         margin: 0 auto;
+        min-height: 50vh;
+        max-height: 50vh;
     }
 
     .ItemList-add{
